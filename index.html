@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sangpyo Kim - Computer Architecture Researcher</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="#" class="logo">Sangpyo Kim</a>
+      <nav class="nav">
+        <a href="#about" class="nav-link active" data-tab="about">About</a>
+        <a href="#research" class="nav-link" data-tab="research">Research</a>
+        <a href="#publications" class="nav-link" data-tab="publications">Publications</a>
+        <a href="#bio" class="nav-link" data-tab="bio">Bio</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Animated circuit board background -->
+    <canvas id="circuit-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-photo">
+        <img src="assets/profile.jpg" alt="Sangpyo Kim" onerror="this.src='assets/profile.svg'">
+      </div>
+      <div class="hero-text">
+        <h1>Sangpyo Kim</h1>
+        <p class="hero-title">Computer Architecture Researcher</p>
+        <p class="hero-subtitle">PhD, Seoul National University</p>
+        <p class="hero-tagline">Accelerating cryptographic primitives through architecture-centric design</p>
+        <div class="hero-links">
+          <a href="mailto:vnb987@gmail.com" class="hero-btn"><i class="fas fa-envelope"></i> Email</a>
+          <a href="https://scholar.google.com/citations?user=PLACEHOLDER" class="hero-btn" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+          <a href="https://github.com/vnb987" class="hero-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- About Tab -->
+    <section id="about" class="tab-content active">
+      <div class="container">
+        <div class="section-header">
+          <h2>About Me</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I received my PhD from the Department of Intelligence and Information at
+              <strong>Seoul National University</strong> in September 2025, advised by
+              <a href="https://search.snu.ac.kr/search?siteId=&query=jung+ho+ahn" target="_blank">Professor Jung Ho Ahn</a>.
+              I am currently a Software Engineer at <strong>CryptoLab Inc.</strong>, where I lead GPU code optimization for
+              homomorphic encryption libraries.
+            </p>
+            <p>
+              My research interests lie in <strong>GPU acceleration</strong> and the design of
+              <strong>application-specific accelerators</strong> informed by profiling and performance analysis
+              of conventional computing platforms. I primarily focus on accelerating cryptographic primitives,
+              including homomorphic encryption, private information retrieval, and zero-knowledge proofs.
+            </p>
+            <p>
+              I have authored numerous publications in top-tier computer architecture venues (ISCA, HPCA, MICRO),
+              with a cumulative citation count exceeding <strong>1,000</strong>.
+            </p>
+          </div>
+
+          <div class="about-sidebar">
+            <div class="info-card">
+              <h3><i class="fas fa-briefcase"></i> Current Position</h3>
+              <p>Software Engineer<br>CryptoLab Inc. (Sep. 2025 &ndash; Present)</p>
+            </div>
+
+            <div class="info-card">
+              <h3><i class="fas fa-tools"></i> Skills</h3>
+              <div class="skill-tags">
+                <span class="tag">C/C++</span>
+                <span class="tag">CUDA</span>
+                <span class="tag">Verilog</span>
+                <span class="tag">Python</span>
+                <span class="tag">Nsight Compute</span>
+                <span class="tag">VTune</span>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h3><i class="fas fa-envelope"></i> Contact</h3>
+              <p>
+                <a href="mailto:vnb987@gmail.com">vnb987@gmail.com</a><br>
+                +82 10-9127-4488
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Tab -->
+    <section id="research" class="tab-content">
+      <div class="container">
+        <div class="section-header">
+          <h2>Research Interests</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="research-grid">
+          <div class="research-card">
+            <div class="research-icon">
+              <i class="fas fa-microchip"></i>
+            </div>
+            <h3>Computer Architecture</h3>
+            <p>
+              Designing application-specific accelerators through systematic profiling and
+              performance analysis of conventional computing platforms. Focus on memory-centric
+              optimization and efficient hardware utilization.
+            </p>
+          </div>
+
+          <div class="research-card">
+            <div class="research-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3>Homomorphic Encryption</h3>
+            <p>
+              Accelerating fully homomorphic encryption (FHE) operations on GPUs and custom ASICs.
+              Proposed BTS, the first bootstrappable FHE accelerator (ISCA 2022, 246 citations).
+            </p>
+          </div>
+
+          <div class="research-card">
+            <div class="research-icon">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <h3>Privacy-Preserving Computing</h3>
+            <p>
+              Enabling practical privacy-preserving machine learning and private information retrieval
+              through HW/SW co-design. Bridging the gap between theoretical security and real-world
+              deployment.
+            </p>
+          </div>
+
+          <div class="research-card">
+            <div class="research-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3>GPU Acceleration</h3>
+            <p>
+              Hardware-aware optimization of cryptographic workloads on modern GPU microarchitectures.
+              Achieved over 100x speedup for FHE bootstrapping through memory-centric GPU optimization.
+            </p>
+          </div>
+        </div>
+
+        <!-- Architecture diagram -->
+        <div class="arch-diagram">
+          <h3>Research Focus: From Algorithm to Silicon</h3>
+          <div class="pipeline">
+            <div class="pipeline-stage">
+              <div class="stage-icon"><i class="fas fa-code"></i></div>
+              <span>Algorithm</span>
+            </div>
+            <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="pipeline-stage">
+              <div class="stage-icon"><i class="fas fa-chart-bar"></i></div>
+              <span>Profiling</span>
+            </div>
+            <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="pipeline-stage">
+              <div class="stage-icon"><i class="fas fa-cogs"></i></div>
+              <span>Optimization</span>
+            </div>
+            <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
+            <div class="pipeline-stage">
+              <div class="stage-icon"><i class="fas fa-microchip"></i></div>
+              <span>Accelerator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications Tab -->
+    <section id="publications" class="tab-content">
+      <div class="container">
+        <div class="section-header">
+          <h2>Publications</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <p class="pub-summary">
+          <i class="fas fa-graduation-cap"></i>
+          Total citations: <strong>1,000+</strong> &nbsp;|&nbsp;
+          <a href="https://scholar.google.com/citations?user=PLACEHOLDER" target="_blank">Google Scholar Profile</a>
+        </p>
+
+        <!-- Selected / First-author publications -->
+        <h3 class="pub-section-title">Selected Publications (First Author)</h3>
+
+        <div class="pub-list">
+          <div class="pub-item highlight">
+            <div class="pub-venue"><span class="venue-badge venue-top">HPCA 2026</span></div>
+            <div class="pub-details">
+              <h4>IVE: An Accelerator for Single-Server Private Information Retrieval Using Versatile Processing Elements</h4>
+              <p class="pub-authors"><strong>Sangpyo Kim</strong>, Hyesung Ji, Jongmin Kim, Wonseok Choi, Jaiyoung Park and Jung Ho Ahn</p>
+              <p class="pub-desc">Introduced techniques to solve memory bandwidth bottlenecks in PIR and proposed a tailored accelerator achieving over three orders of magnitude better throughput than prior hardware solutions.</p>
+            </div>
+          </div>
+
+          <div class="pub-item highlight">
+            <div class="pub-venue"><span class="venue-badge venue-top">ISCA 2022</span></div>
+            <div class="pub-details">
+              <h4>BTS: An Accelerator for Bootstrappable Fully Homomorphic Encryption</h4>
+              <p class="pub-authors"><strong>Sangpyo Kim</strong>, Jongmin Kim, Michael Jaemin Kim, Wonkyung Jung, John Kim, Minsoo Rhu, Jung Ho Ahn</p>
+              <p class="pub-desc">Proposed memory access time-driven design for FHE acceleration. Finalist for Intel Hardware Security Academic Awards 2024.</p>
+              <span class="citation-badge"><i class="fas fa-quote-right"></i> 246 citations</span>
+            </div>
+          </div>
+
+          <div class="pub-item highlight">
+            <div class="pub-venue"><span class="venue-badge venue-mid">SEED 2024</span></div>
+            <div class="pub-details">
+              <h4>CiFHER: A Chiplet-Based FHE Accelerator with a Resizable Structure</h4>
+              <p class="pub-authors"><strong>Sangpyo Kim</strong>, Jongmin Kim, Jaeyoung Choi, Jung Ho Ahn</p>
+              <span class="citation-badge"><i class="fas fa-quote-right"></i> 10 citations</span>
+            </div>
+          </div>
+
+          <div class="pub-item highlight">
+            <div class="pub-venue"><span class="venue-badge venue-mid">IISWC 2020</span></div>
+            <div class="pub-details">
+              <h4>Accelerating Number Theoretic Transformations for Bootstrappable Homomorphic Encryption on GPUs</h4>
+              <p class="pub-authors"><strong>Sangpyo Kim</strong>, Wonkyung Jung, Jaiyoung Park, Jung Ho Ahn</p>
+              <p class="pub-desc">Analyzed computational traits of NTT in HE context. The proposed implementation influenced subsequent GPU-acceleration works.</p>
+              <span class="citation-badge"><i class="fas fa-quote-right"></i> 103 citations</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- All publications -->
+        <h3 class="pub-section-title">All Publications</h3>
+
+        <div class="pub-list">
+          <div class="pub-item">
+            <div class="pub-venue"><span class="venue-badge">IEEE Micro 2026</span></div>
+            <div class="pub-details">
+              <h4>A Five-Year Journey to Accelerate Homomorphic Encryption with GPUs, Demonstrated by Sub-25ms CNN Inference</h4>
+              <p class="pub-authors">Wonseok Choi*, <strong>Sangpyo Kim</strong>*, Hyesung Ji, and Jung Ho Ahn (*Co-first authors)</p>
+              <span class="citation-badge">Accepted (to appear)</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-venue"><span class="venue-badge">arXiv</span></div>
+            <div class="pub-details">
+              <h4>The New LLM Bottleneck: A Systems Perspective on Latent Attention and Mixture-of-Experts</h4>
+              <p class="pub-authors">Sungmin Yun, Seonyong Park, Hwayong Nam, Younjoo Lee, Gunjun Lee, Kwanhee Kyung, <strong>Sangpyo Kim</strong>, Nam Sung Kim, Jongmin Kim, Hyungyo Kim, Juhwan Cho, Seungmin Baek, Jung Ho Ahn</p>
+              <span class="citation-badge"><i class="fas fa-quote-right"></i> 6 citations</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-venue"><span class="venue-badge">Computer 2025</span></div>
+            <div class="pub-details">
+              <h4>Unlocking Private Computation at Scale: The Acceleration of Homomorphic Encryption</h4>
+              <p class="pub-authors">Jaiyoung Park, <strong>Sangpyo Kim</strong>, Jongmin Kim, Jung Ho Ahn</p>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-venue"><span class="venue-badge venue-top">HPCA 2025</span></div>
+            <div class="pub-details">
+              <h4>Anaheim: Architecture and Algorithms for Processing Fully Homomorphic Encryption in Memory</h4>
+              <p class="pub-authors">Jongmin Kim, Sungmin Yun, Hyesung Ji, Wonseok Choi, <strong>Sangpyo Kim</strong>, and Jung Ho Ahn</p>
+              <span class="citation-badge"><i class="fas fa-quote-right"></i> 8 citations</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-venue"><span class="venue-badge">CAL 2024</span></div>
+            <div class="pub-details">
+              <h4>Accelerating Programmable Bootstrapping Targeting Contemporary GPU Microarchitecture</h4>
+              <p class="pub-authors">Hyesung Ji, <strong>Sangpyo Kim</strong>, Jaewan Choi and Jung Ho Ahn</p>
+              <span class="citation-badge"><i class="fas fa-quote-right"></i> 5 citations</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-venue"><span class="venue-badge">IEEE Access 2023</span></div>
+            <div class="pub-details">
+              <h4>HyPHEN: A Hybrid Packing Method and Optimizations for Homomorphic Encryption-Based Neural Networks</h4>
+              <p class="pub-authors">Donghwan Kim, Jaiyoung Park, Jongmin Kim, <strong>Sangpyo Kim</strong> and Jung Ho Ahn</p>
+              <span class="citation-badge"><i class="fas fa-quote-right"></i> 36 citations</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-venue"><span class="venue-badge venue-top">ISCA 2023</span></div>
+            <div class="pub-details">
+              <h4>SHARP: A Short-Word Hierarchical Accelerator for Robust and Practical Fully Homomorphic Encryption</h4>
+              <p class="pub-authors">Jongmin Kim, <strong>Sangpyo Kim</strong>, Jaewan Choi, Jaiyoung Park, Donghwan Kim, and Jung Ho Ahn</p>
+              <span class="citation-badge"><i class="fas fa-quote-right"></i> 112 citations</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-venue"><span class="venue-badge venue-top">MICRO 2022</span></div>
+            <div class="pub-details">
+              <h4>ARK: Fully Homomorphic Encryption Accelerator with Runtime Data Generation and Inter-Operation Key Reuse</h4>
+              <p class="pub-authors">Jongmin Kim, Gwangho Lee, <strong>Sangpyo Kim</strong>, Gina Sohn, John Kim, Minsoo Rhu, Jung Ho Ahn</p>
+              <span class="citation-badge"><i class="fas fa-quote-right"></i> 180 citations</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-venue"><span class="venue-badge">TCHES 2021</span></div>
+            <div class="pub-details">
+              <h4>Over 100x Faster Bootstrapping in Fully Homomorphic Encryption through Memory-Centric Optimization with GPUs</h4>
+              <p class="pub-authors">Wonkyung Jung, <strong>Sangpyo Kim</strong>, Jung Ho Ahn, Jung Hee Cheon, Younho Lee</p>
+              <span class="citation-badge"><i class="fas fa-quote-right"></i> 261 citations</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-venue"><span class="venue-badge">IEEE Access 2021</span></div>
+            <div class="pub-details">
+              <h4>Accelerating Fully Homomorphic Encryption through Architecture-Centric Analysis and Optimization</h4>
+              <p class="pub-authors">Wonkyung Jung, Eojin Lee, <strong>Sangpyo Kim</strong>, Jongmin Kim, Namhoon Kim, Keewoo Lee, Chohong Min, Jung Hee Cheon, Jung Ho Ahn</p>
+              <span class="citation-badge"><i class="fas fa-quote-right"></i> 77 citations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bio Tab -->
+    <section id="bio" class="tab-content">
+      <div class="container">
+        <div class="section-header">
+          <h2>Biography</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker current"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Sep. 2025 &ndash; Present</span>
+              <h3>Software Engineer</h3>
+              <h4>CryptoLab Inc.</h4>
+              <p>
+                Responsible for hardware-aware optimization of the company's latest GPU library, HEaaN2.
+                Profiling existing code to identify major bottlenecks and proposing effective solutions.
+                Leading GPU code optimization efforts for newly adopted algorithms in homomorphic encryption.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2019 &ndash; Sep. 2025</span>
+              <h3>Ph.D. in Intelligence and Information</h3>
+              <h4>Seoul National University (SNU)</h4>
+              <p>
+                Advisor: Professor Jung Ho Ahn<br>
+                GPA: 3.97 / 4.3<br>
+                Focus: Computer architecture, Homomorphic encryption acceleration, HW/SW co-design
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2013 &ndash; 2019</span>
+              <h3>B.S. in Electrical and Computer Engineering</h3>
+              <h4>Seoul National University (SNU)</h4>
+              <p>GPA: 3.6 / 4.3</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activities -->
+        <div class="section-header" style="margin-top: 3rem;">
+          <h2>Professional Activities</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="activities-list">
+          <div class="activity-item">
+            <i class="fas fa-users"></i>
+            <div>
+              <strong>ISPASS 2026</strong> &mdash; Publication Chair
+            </div>
+          </div>
+          <div class="activity-item">
+            <i class="fas fa-pen"></i>
+            <div>
+              <strong>IEEE TCAD</strong> &mdash; Reviewer
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Sangpyo Kim. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="mailto:vnb987@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://scholar.google.com/citations?user=PLACEHOLDER" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://github.com/vnb987" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
