@@ -118,18 +118,30 @@
         </div>
 
         <div class="research-summary">
-          <div class="research-summary-icon"><i class="fas fa-bullseye"></i></div>
           <div class="research-summary-text">
-            <h3>Making Privacy-Preserving Computation Practical</h3>
+            <h3>Hardware &harr; Algorithm Co-Evolution</h3>
             <p>
-              My core research goal is to bridge the gap between <strong>theoretically secure computation</strong>
-              and <strong>real-world deployment</strong>. Cryptographic primitives such as homomorphic encryption
-              and private information retrieval promise strong privacy guarantees, but their computational overhead
-              remains a critical barrier. I tackle this challenge through a full-stack approach &mdash; from
-              <strong>GPU kernel optimization</strong> and <strong>algorithm-hardware co-design</strong> to building
-              <strong>dedicated accelerator architectures</strong> &mdash; ultimately aiming to make encrypted
-              computation fast enough for practical machine learning and cloud services.
+              I believe the best performance breakthroughs come from understanding both sides of the stack.
+              My research pursues two tightly coupled directions:
             </p>
+          </div>
+          <div class="research-loop">
+            <div class="loop-card loop-hw">
+              <div class="loop-label"><i class="fas fa-microchip"></i> Hardware for Algorithm</div>
+              <p>Profiling algorithmic workloads to uncover bottlenecks, then designing
+                <strong>accelerator architectures</strong> and <strong>GPU optimizations</strong>
+                tailored to the computation's unique characteristics.</p>
+            </div>
+            <div class="loop-arrows">
+              <span class="loop-arrow-down"><i class="fas fa-arrow-down"></i></span>
+              <span class="loop-arrow-up"><i class="fas fa-arrow-up"></i></span>
+            </div>
+            <div class="loop-card loop-algo">
+              <div class="loop-label"><i class="fas fa-code"></i> Algorithm for Hardware</div>
+              <p>Leveraging architectural insights to <strong>reshape algorithms</strong> themselves
+                &mdash; restructuring data layouts, reordering operations, and reducing memory footprints
+                so that software and hardware amplify each other.</p>
+            </div>
           </div>
         </div>
 

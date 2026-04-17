@@ -317,9 +317,6 @@ a:hover {
 
 /* ===== Research ===== */
 .research-summary {
-  display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
   padding: 1.75rem;
   background: linear-gradient(135deg, var(--bg-card), rgba(59, 130, 246, 0.06));
   border: 1px solid rgba(59, 130, 246, 0.2);
@@ -327,31 +324,103 @@ a:hover {
   margin-bottom: 2rem;
 }
 
-.research-summary-icon {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: rgba(59, 130, 246, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  color: var(--accent-light);
-  margin-top: 2px;
+.research-summary-text {
+  margin-bottom: 1.25rem;
 }
 
 .research-summary-text h3 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
   color: var(--text-primary);
 }
 
 .research-summary-text p {
   font-size: 0.92rem;
   color: var(--text-secondary);
-  line-height: 1.75;
+  line-height: 1.7;
+}
+
+.research-loop {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.loop-card {
+  padding: 1.25rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+}
+
+.loop-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.loop-card p strong {
+  color: var(--text-primary);
+}
+
+.loop-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loop-hw .loop-label {
+  color: var(--accent-light);
+}
+
+.loop-algo .loop-label {
+  color: var(--accent-green);
+}
+
+.loop-arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.loop-arrow-down {
+  color: var(--accent-light);
+  animation: pulseDown 2s ease-in-out infinite;
+}
+
+.loop-arrow-up {
+  color: var(--accent-green);
+  animation: pulseUp 2s ease-in-out infinite 1s;
+}
+
+@keyframes pulseDown {
+  0%, 100% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(3px); }
+}
+
+@keyframes pulseUp {
+  0%, 100% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-3px); }
+}
+
+@media (max-width: 768px) {
+  .research-loop {
+    grid-template-columns: 1fr;
+  }
+
+  .loop-arrows {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .research-grid {
