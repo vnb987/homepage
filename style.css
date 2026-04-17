@@ -316,6 +316,44 @@ a:hover {
 }
 
 /* ===== Research ===== */
+.research-summary {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.75rem;
+  background: linear-gradient(135deg, var(--bg-card), rgba(59, 130, 246, 0.06));
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+}
+
+.research-summary-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(59, 130, 246, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--accent-light);
+  margin-top: 2px;
+}
+
+.research-summary-text h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: var(--text-primary);
+}
+
+.research-summary-text p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
 .research-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
