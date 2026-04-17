@@ -638,6 +638,15 @@ a:hover {
   margin-bottom: 0.35rem;
 }
 
+.pub-details h4 a {
+  color: var(--text-primary);
+  transition: color var(--transition);
+}
+
+.pub-details h4 a:hover {
+  color: var(--accent-light);
+}
+
 .pub-authors {
   font-size: 0.82rem;
   color: var(--text-muted);
