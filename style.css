@@ -115,11 +115,11 @@ a:hover {
 /* ===== Hero ===== */
 .hero {
   position: relative;
-  min-height: 380px;
+  min-height: 340px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 1.5rem 30px;
+  padding: 100px 1.5rem 8px;
   overflow: hidden;
 }
 
@@ -148,8 +148,8 @@ a:hover {
 }
 
 .hero-photo img {
-  width: 200px;
-  height: 200px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
@@ -162,6 +162,14 @@ a:hover {
   font-weight: 700;
   letter-spacing: -0.03em;
   margin-bottom: 0.25rem;
+}
+
+.hero-name-kr {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 0;
+  margin-left: 0.4rem;
 }
 
 .hero-title {
@@ -213,7 +221,7 @@ a:hover {
 /* ===== Tab Content ===== */
 .tab-content {
   display: none;
-  padding: 1.5rem 0 4rem;
+  padding: 0.5rem 0 4rem;
   animation: fadeIn 0.4s ease;
 }
 
